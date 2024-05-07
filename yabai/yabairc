@@ -1,0 +1,33 @@
+yabai -m config layout bsp
+yabai -m config window_placement second_child
+
+# padding
+yabai -m config top_padding 8
+yabai -m config bottom_padding 8
+yabai -m config left_padding 8
+yabai -m config right_padding 8
+yabai -m config window_gap 8
+
+# mouse settings
+yabai -m config mouse_follows_focus on
+
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+
+yabai -m mouse_drop_action swap
+
+# apps to disable window management on
+
+#Apple apps
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Weather$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Calendar$" manage=off
+
+# Disable tiling on pdfs specially
+# yabai -m rule --add app="^Preview$" manage=off
+
+#not owrking for some reason(read docs)
+yabai -m rule --add app="whatsApp" manage=off
